@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体育赛事日程表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- 左侧：日历 -->
+        <div id="calendar">
+            <div id="calendar-header">
+                <button id="prevMonth">←</button>
+                <span id="month"></span>
+                <button id="nextMonth">→</button>
+            </div>
+            <div id="days-of-week">
+                <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+            </div>
+            <div id="dates"></div>
+        </div>
+
+        <!-- 右侧：预测展示 -->
+        <div id="prediction">
+        <!-- 上部：历史预测正确率 -->
+        <div id="header">
+          <h2>历史预测正确率：<span id="accuracy">85%</span></h2>
+        </div>
+            <h3>赛事预测</h3>
+            <div id="prediction-list">
+                <!-- 显示最近三场比赛的预测和实际结果 -->
+            </div>
+            <div id="upcoming-predictions">
+                <h4>接下来可预测的比赛</h4>
+                <div id="upcoming-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
