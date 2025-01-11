@@ -89,9 +89,10 @@ body {
 }
 
 .date .event {
-  font-size: 1em;
+  font-size: 0.8em;
   display: block;
   margin-bottom: 10px;
+  overflow-y: auto;
 }
 
 #prediction {
