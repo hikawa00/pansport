@@ -1,0 +1,206 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#calendar {
+  width: 70%;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#calendar-header button {
+  padding: 5px 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+/* 标亮今天的日期样式 */
+.date.today {
+  background-color: #ffcc00!important;  /* 明亮的黄色 */
+  color: #9d0a0a; 
+  font-weight: bold;  /* 加粗 */
+  border-radius: 60%;
+}
+
+#dates div {
+  padding: 10px;
+  width: 100%;  /* 使每个格子占据父容器的宽度 */
+  height: 130px; /* 固定高度，确保日期格子的大小一致 */
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;  /* 使padding不会影响整体宽高 */
+  overflow: hidden; /* 隐藏超出部分 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  position: relative; /* 设置为相对定位，确保内部绝对定位的子元素能够相对它进行定位 */
+  padding: 25px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* 使用 flex 布局，让内容上下排列 */
+  justify-content: flex-start; /* 保证日期数字在顶部 */
+  box-sizing: border-box; /* 确保内边距不会影响布局 */
+  height: 150px; /* 给每个日期格子指定一个高度 */
+}
+
+.date .event {
+  font-size: 1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#prediction {
+  width: 30%;
+  padding-left: 40px;
+}
+
+#prediction h3, #upcoming-predictions h4 {
+  font-size: 1.2em;
+}
+
+#prediction-list, #upcoming-predictions {
+  margin-top: 20px;
+}
+
+#prediction-list div, #upcoming-predictions div {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+#upcoming-list {
+  background-color: lightgreen;  /* 背景色 */
+  color: black;                  /* 设置为黑色文本 */
+  padding: 10px;
+  border: 1px solid #ccc;        /* 增加边框 */
+  min-height: 100px;             /* 设置最小高度 */
+  display: block;                /* 确保元素显示 */
+  width: 100%;                   /* 确保宽度足够 */
+  box-sizing: border-box;        /* 确保 padding 不影响宽度计算 */
+}
+
+.match-item-container {
+  background-color: #fff; /* 背景白色 */
+  padding: 15px;
+  border-radius: 8px;  /* 圆角边框 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加上轻微阴影效果 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 加上过渡效果 */
+}
+
+.match-item-container:hover {
+  transform: scale(1.05); /* 放大效果 */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的阴影效果 */
+}
+
+.match-item {
+  font-size: 1.0em;
+  text-align: center;
+  font-weight: bold;
+  color: #333; /* 文字颜色 */
+}
+
+.match-item-container + .match-item-container {
+  margin-top: 10px;  /* 各个比赛项之间增加间距 */
+}
+
+#accuracy {
+  font-weight: bold;
+  color: green;
+}
+
+.match-item-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.predict-btn {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  z-index: 10;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.predict-btn:hover {
+  background-color: #45a049;
+}
+
+.interest-levels {
+  margin-top: 10px;
+}
+
+.interest-levels button {
+  margin-right: 5px;
+  z-index: 10;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.interest-levels button:hover {
+  background-color: #e0e0e0;
+}
+
+

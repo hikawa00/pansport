@@ -1,0 +1,59 @@
+<!--
+ * @Author: 吴伟 15711376175@163.com
+ * @Date: 2025-01-10 10:22:38
+ * @LastEditors: 吴伟 15711376175@163.com
+ * @LastEditTime: 2025-01-11 12:05:41
+ * @FilePath: /1-11-2/pansport/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体育赛事日程表</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- 左侧：日历 -->
+        <div id="calendar">
+            <div id="calendar-header">
+                <button id="prevMonth">←</button>
+                <span id="month"></span>
+                <button id="nextMonth">→</button>
+            </div>
+            <div id="days-of-week">
+                <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+            </div>
+            <div id="dates"></div>
+        </div>
+
+        <!-- 右侧：预测展示 -->
+        <div id="prediction">
+        <!-- 上部：历史预测正确率 -->
+        <div id="header">
+          <h2>历史预测正确率：<span id="accuracy">85%</span></h2>
+        </div>
+            <h3>赛事预测</h3>
+            <div id="prediction-list">
+                <!-- 显示最近三场比赛的预测和实际结果 -->
+            </div>
+            <div id="upcoming-predictions">
+                <h4>接下来可预测的比赛</h4>
+                <div class="filter">
+                    <div class="filter-tabs">
+                        <button class="tab-btn active" data-type="football">足球</button>
+                        <button class="tab-btn" data-type="f1">F1</button>
+                        <button class="tab-btn" data-type="tennis">网球</button>
+                    </div>
+                </div>
+                <div id="upcoming-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
