@@ -1,4 +1,3 @@
-const matchDate = new Date(match.utcDate);
 const calendar = document.getElementById('calendar');
 const monthElement = document.getElementById('month');
 const prevMonthBtn = document.getElementById('prevMonth');
